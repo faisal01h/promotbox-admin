@@ -1,20 +1,36 @@
 <template>
-  <router-view />
+  <div class="main">
+    <Sidebar />
+    <div class="wrapper">
+      <router-view />
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
+  import Sidebar from './components/Sidebar.vue';
 </script>
 
 <style>
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 #app {
-  font-family: Avenir, Helvetica, Segoe UI Variable, Segoe UI, Roboto,
-    sans-serif;
+  font-family: Avenir, Helvetica, Segoe UI Variable, Segoe UI, Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  text-align: left;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+.main {
+  @apply flex items-start;
+}
+
+.wrapper {
+    background-color: #e1ecee;
+    height: 100vh;
+    @apply w-full;
 }
 </style>
