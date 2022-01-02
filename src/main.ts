@@ -2,8 +2,16 @@ import App from "./App.vue";
 import { createApp } from "vue";
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "./pages/Home.vue";
+import Posters from "./pages/Posters.vue";
+import Users from "./pages/Users.vue";
+import Reports from "./pages/Reports.vue";
 
-const routes = [{ path: "/", component: Home }];
+const routes = [
+  { path: "/", component: Home },
+  { path: "/posters", component: Posters },
+  { path: "/users", component: Users },
+  { path: "/reports", component: Reports },
+];
 
 const router = createRouter({
   history: createWebHistory(),
